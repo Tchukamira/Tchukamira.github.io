@@ -11,6 +11,15 @@ hamburger.addEventListener("click", () => {
     mobileNav.classList.toggle("openDrawer")
 })
 
+function toggleMobileNav() {
+    mobileNav.classList.toggle("openDrawer");
+    bar1.classList.toggle("animateBar1")
+    bar2.classList.toggle("animateBar2")
+    bar3.classList.toggle("animateBar3")
+}
+
+mobileNav.addEventListener('click', toggleMobileNav);
+
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
